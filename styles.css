@@ -1,20 +1,73 @@
-.button {
-    font-size: 25px;
-    padding: 10px 20px;
-    background: #3f0069;
-    border: unset;
-    color: #fff;
-    cursor: pointer;
-    box-shadow: 0 0 2px #000;
-    outline: 0;
-    position: relative;
+body{
+    background-image: url('./kids-game-rock-paper-scissors-pattern-white-background-134992609.jpg');
+}
+
+#title{
+    color: #111;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-align: center; 
+}
+#count{
+    position: center;
+    border: 3px solid black;
+}
+
+.holders {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
   }
-  .button:before {
-    content: "\f255";
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+.left {
+  top:220px;
+  left:200px;
+  height: 300px;
+  width: 300px;
+}
+
+.right {
+  top: 220px;
+  right: 220px;
+  height: 300px;
+  width: 300px;
+
+}
+#pa {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: black;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    text-align: center;
+  }
+  
+  #pa:hover {background-color: black}
+  
+  #pa:active {
+    background-color: red;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  #again{
+      text-align: center;
+  }
+  #message{
+      text-align: center;
+  }
+  .buttons{
+      top: 90%; 
+      text-align: center;
+      bottom: 10%;
   }
