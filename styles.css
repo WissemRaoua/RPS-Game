@@ -1,10 +1,10 @@
 body{
-    background-image: url('./kids-game-rock-paper-scissors-pattern-white-background-134992609.jpg');
+  background: linear-gradient(90deg, rgba(106,106,106,1) 0%, rgba(168,43,43,1) 99%);
 }
 
 #title{
     color: #111;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Games', sans-serif;
     font-size: 60px;
     font-weight: bold;
     letter-spacing: -1px;
@@ -19,17 +19,20 @@ body{
 .holders {
     height: 100%;
     width: 50%;
-    position: fixed;
+    position: absolute;
     z-index: 1;
     top: 0;
     overflow-x: hidden;
     padding-top: 20px;
+    font-size: 28px;
+    font-family: 'Games', sans-serif;
   }
 .left {
   top:220px;
   left:200px;
   height: 300px;
   width: 300px;
+  text-align: center;
 }
 
 .right {
@@ -37,6 +40,7 @@ body{
   right: 220px;
   height: 300px;
   width: 300px;
+  text-align: center;
 
 }
 #pa {
@@ -51,6 +55,7 @@ body{
     border-radius: 15px;
     box-shadow: 0 9px #999;
     text-align: center;
+    font-family: 'Games', sans-serif;
   }
   
   #pa:hover {background-color: black}
@@ -67,7 +72,39 @@ body{
       text-align: center;
   }
   .buttons{
-      top: 90%; 
       text-align: center;
-      bottom: 10%;
+      margin-top: 300px;
+  }
+  #choice{
+    margin-top: 25px;
+    text-align: center;
+  }
+  .clickers {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: black;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    font-family: 'Games', sans-serif;
+  
+  }
+  
+  .clickers:hover {background-color: black}
+  
+  .clickers:active {
+    background-color: red;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  #rock{
+border-radius: 75%;
+left :30px
+  }
+  .mychoice {
+margin-left:20%;
   }
