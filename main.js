@@ -18,3 +18,19 @@
 
 
 // we have 3 option to randomize 
+
+    function randomRPS(){
+        var RPS = ['Rock.png','Paper.png','scissor.png'];
+        var randomIndex = Math.floor(Math.random() * RPS.length);
+      return RPS[randomIndex];
+    }
+    
+    function show(){
+        return show('Rock.png')
+    }
+    
+    function hide(){
+        return 
+    }
+    $('#rockk').click($('Rock.png').show)
+
