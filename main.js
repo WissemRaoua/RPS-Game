@@ -19,18 +19,111 @@
 
 // we have 3 option to randomize 
 
-    function randomRPS(){
-        var RPS = ['Rock.png','Paper.png','scissor.png'];
-        var randomIndex = Math.floor(Math.random() * RPS.length);
-      return RPS[randomIndex];
+    // function randomRPS(){
+    //     var RPS = ['Rock.png','Paper.png','scissor.png'];
+    //     var randomIndex = Math.floor(Math.random() * RPS.length);
+    //   return RPS[randomIndex];
+    // }
+    
+    // function show(){
+    //     return show('Rock.png')
+    // }
+    
+    // function hide(){
+    //     return 
+    // }
+    // $('#rockk').click($('Rock.png').show())
+       function random(){
+        var images=['Rock.png','Paper.png','Scissor.png']
+        var randomIndex = Math.floor(Math.random() * images.length);
+        console.log(randomIndex)
+      return images[randomIndex];
+      
     }
     
-    function show(){
-        return show('Rock.png')
-    }
-    
-    function hide(){
-        return 
-    }
-    $('#rockk').click($('Rock.png').show)
 
+
+      //  function compare(){
+      //   //  check the images if they match or not
+      //   if($('#computer').attr('src')===$('#user').attr('src')){
+
+      //     $('#rock').click($('#message').alert('Tie Game'))
+      //   }}
+
+    $('#rock').click(function(){
+        // change image source 
+        $('#user').attr('src','Rock.png')
+        // randomize computer choice
+        $('#computer').attr('src',random())
+        // see who wins
+       msgRock()
+        // counter for wins draws or loses ++
+        counter++
+        $div.text(counter)
+
+    })
+
+    function msgRock(){
+      if($('#computer').attr('src')===$('#user').attr('src')){
+        alert('tie game')
+      } else if($('#computer').attr('src')==='Scissor.png' && $('#user').attr('src')==='Rock.png'){
+        alert('You win')
+       }else if($('#computer').attr('src')==='Paper.png' && $('#user').attr('src')==='Rock.png'){
+        alert('You Lose')
+       }
+
+      }
+      $('#paper').click(function(){
+        // change image source 
+        $('#user').attr('src','Paper.png')
+        // randomize computer choice
+        $('#computer').attr('src',random())
+        // see who wins
+       msgPaper()
+        // counter for wins draws or loses ++
+        counter++
+        $div.text(counter)
+    })
+    function msgPaper(){
+      if($('#computer').attr('src')===$('#user').attr('src')){
+        alert('tie game')
+      } else if($('#computer').attr('src')==='Rock.png' && $('#user').attr('src')==='Paper.png'){
+        alert('You win')
+       }else if ($('#computer').attr('src')==='Scissor.png' && $('#user').attr('src')==='Paper.png') {
+        alert('You lose')
+       }
+      }
+
+      $('#scissor').click(function(){
+        // change image source 
+        $('#user').attr('src','Scissor.png')
+        // randomize computer choice
+        $('#computer').attr('src',random())
+        // see who wins
+       msgScissor()
+        // counter for wins draws or loses ++
+        counter++
+        $div.text(counter)
+    })
+    function msgScissor(){
+      if($('#computer').attr('src')===$('#user').attr('src')){
+        alert('tie game')
+      } else if($('#computer').attr('src')==='Paper.png' && $('#user').attr('src')==='Scissor.png'){
+        alert('You win')
+       }else if($('#computer').attr('src')==='Rock.png' && $('#user').attr('src')==='Scissor.png'){
+        alert('You lose')
+       }
+      }
+
+      var counter = 0;
+      var $div = $(`<div>${counter}</div>`)
+        $("#count").append($div)
+      $('#pa').click(function(){ 
+        // change image source 
+        $('#user').attr('src','giphy.gif')
+        // randomize computer choice
+        $('#computer').attr('src','giphy.gif')
+
+        
+      })
+     
