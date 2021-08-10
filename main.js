@@ -65,12 +65,16 @@
 
     function msgRock(){
       if($('#computer').attr('src')===$('#user').attr('src')){
-        alert('tie game')
+        // alert('tie game')
+        $('#mg').text('Tie')
       } else if($('#computer').attr('src')==='Scissor.png' && $('#user').attr('src')==='Rock.png'){
-        alert('You win')
+        // alert('You win')
+        $('#mg').text('You Win')
        }else if($('#computer').attr('src')==='Paper.png' && $('#user').attr('src')==='Rock.png'){
-        alert('You Lose')
+        // alert('You Lose')
+        $('#mg').text('You lose')
        }
+       $('#mg').show()
 
       }
       $('#paper').click(function(){
@@ -86,12 +90,17 @@
     })
     function msgPaper(){
       if($('#computer').attr('src')===$('#user').attr('src')){
-        alert('tie game')
+        // alert('tie game')
+
+        $('#mg').text('Tie')
       } else if($('#computer').attr('src')==='Rock.png' && $('#user').attr('src')==='Paper.png'){
-        alert('You win')
+        // alert('You win')
+        $('#mg').text('You win')
        }else if ($('#computer').attr('src')==='Scissor.png' && $('#user').attr('src')==='Paper.png') {
-        alert('You lose')
+        // alert('You lose')
+        $('#mg').text('You lose')
        }
+       $('#mg').show()
       }
 
       $('#scissor').click(function(){
@@ -107,12 +116,16 @@
     })
     function msgScissor(){
       if($('#computer').attr('src')===$('#user').attr('src')){
-        alert('tie game')
+        // alert('tie game')
+        $('#mg').text('Tie')
       } else if($('#computer').attr('src')==='Paper.png' && $('#user').attr('src')==='Scissor.png'){
-        alert('You win')
+        // alert('You win')
+        $('#mg').text('You Win')
        }else if($('#computer').attr('src')==='Rock.png' && $('#user').attr('src')==='Scissor.png'){
-        alert('You lose')
+        // alert('You lose')
+        $('#mg').text('You lose')
        }
+       $('#mg').show()
       }
 
       var counter = 0;
@@ -123,7 +136,12 @@
         $('#user').attr('src','giphy.gif')
         // randomize computer choice
         $('#computer').attr('src','giphy.gif')
+        $('#mg').hide()
 
         
       })
-     
+      //reset 
+     $('#reset').click(function(){
+       counter=0;
+       $div.text(counter)
+     })
