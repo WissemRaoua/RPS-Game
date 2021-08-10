@@ -101,10 +101,23 @@ body{
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
-  #rock{
-border-radius: 75%;
-left :30px
+  #user{
+    border-radius: 75%;
+    left :30px  ;
+    width : 220px;
+    height: 220px;
   }
+  #computer{
+    border-radius: 75%;
+    left :30px  ;
+    width : 220px;
+    height: 220px;
+  }
+
   .mychoice {
 margin-left:20%;
   }
+  #count{
+  
+  }
+  
