@@ -19,20 +19,39 @@
 
 // we have 3 option to randomize 
 
-    // function randomRPS(){
-    //     var RPS = ['Rock.png','Paper.png','scissor.png'];
-    //     var randomIndex = Math.floor(Math.random() * RPS.length);
-    //   return RPS[randomIndex];
-    // }
+  
     
-    // function show(){
-    //     return show('Rock.png')
+   
+
+    var audiowin= new Audio('win.mp3')
+    var audiofail= new Audio('fail.mp3')
+    var audiodraw= new Audio('draw.mp3')
+  
+    // function audio(){
+    //   if(Wins++){
+    //     audiowin.play()
+    //   } else if (Draws++){
+    //     audiodraw.play()
+    //   }else if (Loses++){
+    //     audiofail.play()
+    //   }
     // }
-    
-    // function hide(){
-    //     return 
-    // }
-    // $('#rockk').click($('Rock.png').show())
+
+
+
+    var Wins = 0;
+    var $div1 = $(`<div>${Wins}</div>`)
+    $("#w").append($div1)
+
+    var Loses = 0;
+    var $div3 = $(`<div>${Loses}</div>`)
+    $("#l").append($div3)
+
+    var Draws = 0;
+    var $div2 = $(`<div>${Draws}</div>`)
+    $("#d").append($div2)
+
+
        function random(){
         var images=['Rock.png','Paper.png','Scissor.png']
         var randomIndex = Math.floor(Math.random() * images.length);
@@ -40,6 +59,7 @@
       return images[randomIndex];
       
     }
+  
     
 
 
@@ -60,6 +80,8 @@
         // counter for wins draws or loses ++
         counter++
         $div.text(counter)
+        
+        
 
     })
 
@@ -67,12 +89,23 @@
       if($('#computer').attr('src')===$('#user').attr('src')){
         // alert('tie game')
         $('#mg').text('Tie')
+        Draws++
+        $div2.text(Draws)
+        audiodraw.play()
       } else if($('#computer').attr('src')==='Scissor.png' && $('#user').attr('src')==='Rock.png'){
-        // alert('You win')
+        // alert('You Win')
         $('#mg').text('You Win')
+        Wins++
+        $div1.text(Wins) 
+        audiowin.play()
+        
+
        }else if($('#computer').attr('src')==='Paper.png' && $('#user').attr('src')==='Rock.png'){
         // alert('You Lose')
-        $('#mg').text('You lose')
+        $('#mg').text('You Lose')
+        Loses++
+        $div3.text(Loses)
+        audiofail.play()
        }
        $('#mg').show()
 
@@ -87,18 +120,28 @@
         // counter for wins draws or loses ++
         counter++
         $div.text(counter)
+        
     })
     function msgPaper(){
       if($('#computer').attr('src')===$('#user').attr('src')){
         // alert('tie game')
 
         $('#mg').text('Tie')
+        Draws++
+        $div2.text(Draws)
+        audiodraw.play()
       } else if($('#computer').attr('src')==='Rock.png' && $('#user').attr('src')==='Paper.png'){
         // alert('You win')
-        $('#mg').text('You win')
+        $('#mg').text('You Win')
+        Wins++
+        $div1.text(Wins)
+        audiowin.play()
        }else if ($('#computer').attr('src')==='Scissor.png' && $('#user').attr('src')==='Paper.png') {
         // alert('You lose')
-        $('#mg').text('You lose')
+        $('#mg').text('You Lose')
+        Loses++
+        $div3.text(Loses)
+        audiofail.play()
        }
        $('#mg').show()
       }
@@ -118,13 +161,23 @@
       if($('#computer').attr('src')===$('#user').attr('src')){
         // alert('tie game')
         $('#mg').text('Tie')
+        Draws++
+        $div2.text(Draws)
+        audiodraw.play()
       } else if($('#computer').attr('src')==='Paper.png' && $('#user').attr('src')==='Scissor.png'){
         // alert('You win')
         $('#mg').text('You Win')
+        Wins++
+        $div1.text(Wins)
+        audiowin.play()
        }else if($('#computer').attr('src')==='Rock.png' && $('#user').attr('src')==='Scissor.png'){
-        // alert('You lose')
-        $('#mg').text('You lose')
-       }
+        // alert('You Lose')
+        $('#mg').text('You Lose')
+        Loses++
+        $div3.text(Loses)
+        audiofail.play()
+
+      }
        $('#mg').show()
       }
 
@@ -143,5 +196,12 @@
       //reset 
      $('#reset').click(function(){
        counter=0;
-       $div.text(counter)
+       $div.text(counter);
+       Wins=0;
+       $div1.text(Wins);
+       Draws=0;
+       $div2.text(Draws);
+       Loses=0;
+       $div3.text(Loses);
+
      })
